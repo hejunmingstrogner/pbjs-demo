@@ -1,0 +1,6 @@
+protobufjs 转 js/ts 命令
+	https://blog.csdn.net/tzm95_007/article/details/80694890
+直接命令: proto 转 js
+pbjs -t static-module -w commonjs -o proto.js *.proto
+
+proto 文件转成 js 后，再用js 做一个 .d.ts 的声明,方便在 ts 中使用.
