@@ -90,22 +90,22 @@ export default class NewClass extends cc.Component {
     // onmessage 函数
     messageWebsocket(this: WebSocket, ev: MessageEvent){
 
-    
-                  msgpackage.print()
 
                   msgpackage.receiveData(ev.data,(buf)=>{
 
-                        let pack = msgpackage.decode(buf)
+                        NewClass.parseMessagePacket(buf)
 
-                         if(pack.messagetype == 1){
+                        // let pack = msgpackage.decode(buf)
 
-                                let room = msg.Room.decode(pack.messages)
+                        //  if(pack.messagetype == 1){
 
-                                console.log('room: ' + room)
-                         }
+                        //         let room = msg.Room.decode(pack.messages)
+
+                        //         console.log('room: ' + room)
+                        //  }
 
 
-                        cc.log('pack: ' + pack)
+                        // cc.log('pack: ' + pack)
                   })
 
 
@@ -126,55 +126,53 @@ export default class NewClass extends cc.Component {
 
     // 解析消息的方法
 
-    parseMessagePacket(buffer){
+     static  parseMessagePacket(buffer){
 
         let messagePacket = msgpackage.decode(buffer)
 
         switch (messagePacket.messagetype){
-
-            case "Default":
-                case 0:
-                  
-
-
-                    break;
-                case "RoomInfo":
+           
                 case 1:
                    
+                    let roompackeg = roommsg.decode(messagePacket.messages)
                     break;
-                case "PlayerInfo":
+                
                 case 2:
                   
-                    break;
-                case "PrizeInfo":
+                    let msgplayinfo = playermsg.decode(messagePacket.messages)
+                     break;
+            
                 case 3:
-                  
+
+                    let msgprize = Prizemsg.decode(messagePacket.messages)
                     break;
-                case "GameTime":
+                
                 case 4:
-                    
+                
+                    let msggametime = GameTimemsg.decode(messagePacket.messages)
+
                     break;
-                case "PlayerPrize":
+            
                 case 5:
-                  
+            
+                 //   let msgplayprize
+
                     break;
-                case "Bulletin":
+            
                 case 7:
                  
+                    let msgbulletin = bulletinmsg.decode(messagePacket.messages)
+
                     break;
-                case "ErrInfo":
+                
                 case 8:
-                  
+                
+                    let msgerror = errinfomsg.decode(messagePacket.messages)
+
                     break;
                 }
 
-
-
-
         }
-
-
-    }
 
 
 }
