@@ -2,7 +2,7 @@
 "use strict";
 
 var $protobuf = require("protobufjs/minimal");
-
+// var $protobuf = protobuf
 // Common aliases
 var $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.util;
 
@@ -18,16 +18,7 @@ $root.grace = (function() {
      */
     var grace = {};
 
-    grace.proto = (function() {
-
-        /**
-         * Namespace proto.
-         * @memberof grace
-         * @namespace
-         */
-        var proto = {};
-
-        proto.msg = (function() {
+    grace.msg = (function() {
 
             /**
              * Namespace msg.
@@ -98,6 +89,11 @@ $root.grace = (function() {
                     return new Player(properties);
                 };
 
+                Player.code = function code(str){
+
+                        console.log('lajdslfjaldjf' + str)
+                }
+
                 /**
                  * Encodes the specified Player message. Does not implicitly {@link grace.proto.msg.Player.verify|verify} messages.
                  * @function encode
@@ -146,7 +142,7 @@ $root.grace = (function() {
                 Player.decode = function decode(reader, length) {
                     if (!(reader instanceof $Reader))
                         reader = $Reader.create(reader);
-                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.grace.proto.msg.Player();
+                    var end = length === undefined ? reader.len : reader.pos + length, message = new $root.grace.msg.Player();
                     while (reader.pos < end) {
                         var tag = reader.uint32();
                         switch (tag >>> 3) {
@@ -282,10 +278,8 @@ $root.grace = (function() {
                 return Player;
             })();
 
-            return msg;
-        })();
 
-        return proto;
+            return msg;
     })();
 
     return grace;

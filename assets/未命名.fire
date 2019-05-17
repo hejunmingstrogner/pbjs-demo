@@ -17,10 +17,10 @@
         "__id__": 2
       },
       {
-        "__id__": 9
+        "__id__": 10
       },
       {
-        "__id__": 12
+        "__id__": 13
       }
     ],
     "_active": true,
@@ -47,8 +47,8 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.1394743666350405,
-      "y": 0.1394743666350405,
+      "x": 0.6233316637283993,
+      "y": 0.6233316637283993,
       "z": 1
     },
     "_quat": {
@@ -59,7 +59,8 @@
       "w": 1
     },
     "groupIndex": 0,
-    "_id": "33dliIiBNFOo3+artKLFNu"
+    "autoReleaseAssets": false,
+    "_id": "c16f9064-e7ef-4c21-99b2-f8e86f8941dd"
   },
   {
     "__type__": "cc.Node",
@@ -84,6 +85,9 @@
       },
       {
         "__id__": 8
+      },
+      {
+        "__id__": 9
       }
     ],
     "_prefab": null,
@@ -240,7 +244,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 1000,
-      "height": 10000
+      "height": 1000
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -319,6 +323,16 @@
     "_id": "56Mglz/M9C0JyDCGlgvPj0"
   },
   {
+    "__type__": "49f73kvNodMors4gTv8ejTN",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "_id": "82caaKXK5PGYg3guPm/+oL"
+  },
+  {
     "__type__": "d22ccKaGCZMxq2rMEzbumqO",
     "_name": "",
     "_objFlags": 0,
@@ -326,7 +340,7 @@
       "__id__": 2
     },
     "_enabled": true,
-    "_id": "205XiPxxZL0YL4k5yGsLez"
+    "_id": "43SNbe7KpN25847JMCTIe8"
   },
   {
     "__type__": "cc.Node",
@@ -340,10 +354,10 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 10
+        "__id__": 11
       },
       {
-        "__id__": 11
+        "__id__": 12
       }
     ],
     "_prefab": null,
@@ -396,7 +410,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 10
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -424,7 +438,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 9
+      "__id__": 10
     },
     "_enabled": true,
     "valuePocker": {
@@ -444,7 +458,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 13
+        "__id__": 14
       }
     ],
     "_prefab": null,
@@ -497,7 +511,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 12
+      "__id__": 13
     },
     "_enabled": true,
     "_spriteFrame": {
